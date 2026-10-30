@@ -1,1 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #070711;
+  color: white;
+  font-family: 'Inter', sans-serif;
+}
+
+.app {
+  overflow: hidden;
+  min-height: 100vh;
+}
+
+.navbar {
+  height: 85px;
+  padding: 0 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #202033;
+}
+
+.logo {
+  font-size: 23px;
+  font-weight: 900;
+  color: #fff;
+}
+
+.logo span {
+  color: #a78bfa;
+}
+
+.nav-links {
+  display: flex;
+  gap: 35px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #aaaabe;
+  font-size: 14px;
+}
+
+.nav-btn,
+.primary-btn {
+  background: linear-gradient(120deg, #8055ff, #4e8cff);
+  color: white;
+  border: none;
+  padding: 14px 23px;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.hero {
+  text-align: center;
+  padding: 100px 20px 70px;
+  position: relative;
+}
+
+.badge {
+  display: inline-block;
+  border: 1px solid #493b78;
+  color: #c4aaff;
+  padding: 10px 18px;
+  border-radius: 30px;
+  font-size: 11px;
+  letter-spacing: 2px;
+  background: #17102a;
+}
+
+.hero h1 {
+  font-size: clamp(43px, 8vw, 90px);
+  font-weight: 900;
+  line-height: 1.15;
+  margin: 30px 0 20px;
+}
+
+.hero h1 span {
+  display: block;
+  background: linear-gradient(90deg, #a78bfa, #60a5fa);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.hero p {
+  color: #aaaabd;
+  line-height: 1.9;
+  font-size: 16px;
+}
+
+.hero-buttons {
+  margin-top: 32px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.secondary-btn {
+  background: #171725;
+  border: 1px solid #39394f;
+  color: white;
+  padding: 14px 23px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.visual {
+  height: 340px;
+  max-width: 500px;
+  margin: 60px auto 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.orbit {
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  border: 1px solid #57428e;
+  border-radius: 50%;
+  box-shadow: 0 0 35px #7955ff20;
+}
+
+.orbit-two {
+  width: 210px;
+  height: 210px;
+  border-color: #398bff;
+}
+
+.core {
+  width: 125px;
+  height: 125px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 35px;
+  font-size: 70px;
+  font-weight: 900;
+  background: linear-gradient(135deg, #8b5cf6, #2563eb);
+  box-shadow: 0 0 80px #8055ff80;
+  transform: rotate(-10deg);
+}
+
+.floating {
+  position: absolute;
+  padding: 12px 18px;
+  background: #17172b;
+  border: 1px solid #51427e;
+  border-radius: 12px;
+  color: #c4b5fd;
+  font-size: 12px;
+}
+
+.f1 {
+  top: 20px;
+  right: 30px;
+}
+
+.f2 {
+  bottom: 35px;
+  left: 5px;
+}
+
+.f3 {
+  bottom: 50px;
+  right: 5px;
+}
+
+.features {
+  padding: 90px 8%;
+  text-align: center;
+  background: #0c0c19;
+}
+
+.features h2,
+.about h2 {
+  font-size: 35px;
+  margin-bottom: 15px;
+}
+
+.features > p,
+.about p {
+  color: #9999ad;
+  line-height: 1.8;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin-top: 50px;
+}
+
+.card {
+  text-align: left;
+  padding: 30px;
+  background: #141424;
+  border: 1px solid #292941;
+  border-radius: 18px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  border-color: #8b5cf6;
+}
+
+.card span {
+  font-size: 32px;
+  color: #a78bfa;
+}
+
+.card h3 {
+  margin: 20px 0 12px;
+}
+
+.card p {
+  color: #9999ad;
+  line-height: 1.8;
+  font-size: 14px;
+}
+
+.about {
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.about p {
+  max-width: 550px;
+  margin: 20px auto;
+}
+
+footer {
+  padding: 40px 20px;
+  text-align: center;
+  border-top: 1px solid #24243a;
+  color: #77778e;
+  line-height: 2.2;
+  font-size: 13px;
+}
+
+footer .logo {
+  margin-bottom: 10px;
+}
+
+@media(max-width: 700px) {
+  .navbar {
+    padding: 0 5%;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-btn {
+    padding: 11px 13px;
+    font-size: 11px;
+  }
+
+  .hero {
+    padding-top: 80px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .features {
+    padding: 70px 6%;
+  }
+
+  .visual {
+    transform: scale(0.85);
+  }
+}
